@@ -15,10 +15,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pradhumn Gautam | Portfolio",
     description: "Eric Huang's personal portfolio website",
-    url: "https://www.erichuang.art",
     images: [
       {
-        url: "/photo.jpeg",
+        url: "/dp",
         alt: "Pradhumn Gautam | Portfolio",
         width: 640,
         height: 800,
