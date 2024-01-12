@@ -19,13 +19,13 @@ export default function Header() {
               goldenSignature.className,
             )}
           >
-            <Link href="/">Eric Huang</Link>
+            <Link href="/">Pradhumn Gautam</Link>
           </div>
           <div className="nav-links flex gap-x-8 text-xs md:text-base">
             {links.map((link) => (
               <span
                 key={link}
-                className="cursor-pointer"
+                className="cursor-pointer font-bold"
                 onClick={() => {
                   document
                     .getElementById(link)
