@@ -106,7 +106,7 @@ export default function skills() {
           icon: pythonIcon,
         },
         {
-          name: "C++",
+          name: "Java",
           icon: javaIcon,
         },
       ],
