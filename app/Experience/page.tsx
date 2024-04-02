@@ -1,9 +1,5 @@
-const Experience = () => {
-    return ( 
-        <div>
-            experience
-        </div>
-     );
-}
- 
-export default Experience;
+const ExperiencePage = () => {
+  return <div>experience</div>;
+};
+
+export default ExperiencePage;

@@ -6,16 +6,16 @@ const Navbar = () => {
     <div>
       <div className="space-x-4 justify-center flex p-2">
         <Button asChild>
-          <Link href="/Home">Home</Link>
+          <Link href="/">Home</Link>
         </Button>
         <Button asChild>
           <Link href="/projects">Projects</Link>
         </Button>
         <Button asChild>
-          <Link href="/Experience">Experience</Link>
+          <Link href="/experience">Experience</Link>
         </Button>
         <Button asChild>
-          <Link href="/Blogs">Blogs</Link>
+          <Link href="/blogs">Blogs</Link>
         </Button>
       </div>
       <div className="border-b-2"></div>
