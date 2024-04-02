@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main>
+    <main className="">
       <div>
         👋🏻 Hey I&apos;m Pradhumn Gautam (@iPradhumngautam) a Full Stack
         Developer from India. Passionate about Software Development, Cloud

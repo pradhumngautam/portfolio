@@ -1,9 +1,17 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/ui/navbar";
+import type { Metadata } from "next";
+import { Inter, Roboto } from "next/font/google";
+
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,10 +25,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
+      <body className={cn("bg-zinc-900", roboto.className)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
 
-        <div>{children}</div>
+          <div className="pt-24 md:max-w-screen-xl md:mx-auto p-6">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
