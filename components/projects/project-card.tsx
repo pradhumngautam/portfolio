@@ -1,4 +1,4 @@
-import { GanttChart, GithubIcon, Link2Icon } from "lucide-react";
+import { GanttChart, GithubIcon, Key, Link2Icon } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -7,6 +7,21 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+
+const tags = [
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+  "javascript",
+];
 
 const ProjectCard = () => {
   return (
@@ -33,6 +48,14 @@ const ProjectCard = () => {
           connection-pooling is used for maintaining postgress requests.
         </div>
       </CardContent>
+
+      <CardFooter>
+        <div className="flex gap-3 flex-wrap">
+          {tags.map((tag, index) => (
+            <div className="border rounded-full px-4 py-1 shadow-md text-emerald-300" key={index}>{tag}</div>
+          ))}
+        </div>
+      </CardFooter>
     </Card>
   );
 };
