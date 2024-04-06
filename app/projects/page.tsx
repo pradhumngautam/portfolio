@@ -1,8 +1,8 @@
-import Projectcard from "@/components/projects/project-card";
+import ProjectCard from "@/components/projects/project-card";
 
 const Projects = () => {
   return (
-    <Projectcard />
+    <ProjectCard />
   );
 };
 
