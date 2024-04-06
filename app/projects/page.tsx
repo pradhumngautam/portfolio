@@ -1,5 +1,9 @@
+import Projectcard from "@/components/projects/project-card";
+
 const Projects = () => {
-  return <div>projects</div>;
+  return (
+    <Projectcard />
+  );
 };
 
 export default Projects;
