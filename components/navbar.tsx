@@ -25,13 +25,14 @@ const Navbar = () => {
     <div className="flex  items-center h-16 border-b bg-zinc-950 fixed w-full shadow-md justify-between p-5">
       <div className="flex items-center justify-center gap-3">
         {navItems.map((item, index) => (
-          <Button className="rounded-full text-md font-semibold bg-blue-500 shadow-md hover:bg-blue-600 " asChild key={index}>
+          <Button className="rounded-full" asChild variant={"nav"} key={index}>
             <Link href={item.src}>{item.name}</Link>
           </Button>
         ))}
       </div>
+
       <Button
-        className="bg-gradient-to-r from-blue-600 to-blue-900 text-neutral-100 font-semibold text-md"
+        className="bg-gradient-to-r from-emerald-300 to-emerald-600 text-neutral-900 hover:scale-105 transition-all"
         size={"sm"}
         asChild
       >
