@@ -1,5 +1,6 @@
 import React from "react";
-import { GanttChart, GithubIcon, Key, Link2Icon } from "lucide-react";
+import { ExternalLink, GanttChart, GithubIcon, Key, Link2Icon } from "lucide-react";
+import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -8,12 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+
 import { projectData } from "./project-content";
+
 
 type ProjectCardProps = projectData;
 
 
-const ProjectCard = ({ title, description, tags, link }: ProjectCardProps) => {
+const ProjectCard = ({ title,header, description, tags, link }: ProjectCardProps) => {
   return (
     <Card className="md:max-w-screen-md md:mx-auto rounded-none bg-transparent border-none">
       <CardHeader className="flex">
@@ -23,19 +26,30 @@ const ProjectCard = ({ title, description, tags, link }: ProjectCardProps) => {
           </div>
 
           <div className="flex gap-2 ">
+            <Link
+              href={link.github}
+              className="hover:text-blue-500 transition-all" 
+            >
             <GithubIcon className="h-6 w-6 hover:text-green-700" />
-            <Link2Icon className="h-6 w-6 hover:text-blue-700" />
+            </Link>
+
+            {link.live && (
+                <Link
+                  href={link.live}
+                  className="hover:text-blue-500 transition-all"
+                >
+                  <ExternalLink className="h-5 w-5" />
+                </Link>
+              )}
+            
           </div>
         </CardTitle>
 
-        <CardDescription className="text-lg"> Blogging website</CardDescription>
+        <CardDescription className="text-lg"> {header}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="text-neutral-500 text-xl ">
-          Medium is a blogging website which allows user to do CRUD operations
-          on their blogs.Hono.js library of wrangler is used here for writing
-          backend server which is hosted on cloudflare workers,
-          connection-pooling is used for maintaining postgress requests.
+          {description}
         </div>
       </CardContent>
 
