@@ -1,5 +1,5 @@
 const ExperiencePage = () => {
-  return <div>experience</div>;
+  return <div>ExperiencePage</div>;
 };
 
 export default ExperiencePage;
