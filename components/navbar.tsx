@@ -22,7 +22,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center h-16 border-b bg-zinc-950 fixed w-full shadow-md">
+    <div className="flex  items-center h-16 border-b bg-zinc-950 fixed w-full shadow-md justify-between p-5">
       <div className="flex items-center justify-center gap-3">
         {navItems.map((item, index) => (
           <Button className="rounded-full" asChild key={index}>
@@ -30,7 +30,15 @@ const Navbar = () => {
           </Button>
         ))}
       </div>
+      <Button
+            className="bg-gradient-to-r from-blue-600 to-blue-900 text-neutral-100 font-semibold text-md"
+            size={"sm"}
+            asChild
+          >
+            <Link href={""}>Contact Me</Link>
+          </Button>
     </div>
+    
   );
 };
 
