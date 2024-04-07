@@ -1,3 +1,4 @@
+import React from "react";
 import { GanttChart, GithubIcon, Key, Link2Icon } from "lucide-react";
 import {
   Card,
@@ -7,29 +8,18 @@ import {
   CardHeader,
   CardTitle,
 } from "../ui/card";
+import { projectData } from "./project-content";
 
-const tags = [
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-  "javascript",
-];
+type ProjectCardProps = projectData;
 
-const ProjectCard = () => {
+
+const ProjectCard = ({ title, description, tags, link }: ProjectCardProps) => {
   return (
     <Card className="md:max-w-screen-md md:mx-auto rounded-none bg-transparent border-none">
       <CardHeader className="flex">
         <CardTitle className="flex items-center justify-between">
           <div className="flex text-3xl items-center">
-            <GanttChart className="mr-2" /> Medium
+            <GanttChart className="mr-2" /> {title}
           </div>
 
           <div className="flex gap-2 ">
@@ -52,7 +42,12 @@ const ProjectCard = () => {
       <CardFooter>
         <div className="flex gap-3 flex-wrap">
           {tags.map((tag, index) => (
-            <div className="border rounded-full px-4 py-1 shadow-md text-emerald-300" key={index}>{tag}</div>
+            <div
+              className="border rounded-full px-4 py-1 shadow-md text-emerald-300"
+              key={index}
+            >
+              {tag}
+            </div>
           ))}
         </div>
       </CardFooter>

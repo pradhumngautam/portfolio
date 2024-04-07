@@ -2,7 +2,9 @@ import ProjectCard from "@/components/projects/project-card";
 
 const Projects = () => {
   return (
-    <ProjectCard />
+    <div>
+      
+    </div>
   );
 };
 
