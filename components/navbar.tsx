@@ -43,3 +43,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
+<h2 className="text-2xl font-semibold md:text-3xl mb-3 md:mb-6">
+        Projects
+      </h2>
